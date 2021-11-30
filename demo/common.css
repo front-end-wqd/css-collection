@@ -1,0 +1,65 @@
+body, pre {
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+body {
+    height: calc(100vh - 16px * 2);
+    padding: 16px 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+.left {
+    display: flex;
+    flex-direction: column;
+}
+pre code.hljs {
+    padding: 0 calc(16px + 24px) 0 24px;
+    min-width: 25vw;
+    box-shadow: -8px -8px 16px #0f0f0f,
+                8px 8px 16px #2d2d2d;
+}
+pre {
+    margin-bottom: 8px;
+}
+code {
+    padding: 0 initial;
+    width: 100%;
+    position: relative;
+    border-radius: 8px;
+    pointer-events: none;
+}
+.copy::before {
+    content: url(../svg/copy.svg);
+    right: 8px;
+    top: 8px;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    border-radius: 4px;
+    justify-content: center;
+    padding-top: 4px;
+    box-sizing: border-box;
+    background-color: #dd3e54;
+    color: white;
+    position: absolute;
+    cursor: pointer;
+    pointer-events: auto;
+}
+.check::before {
+    content: url(../svg/check.svg);
+    right: 8px;
+    top: 8px;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    border-radius: 4px;
+    justify-content: center;
+    padding-top: 4px;
+    box-sizing: border-box;
+    background-color: #6be585;
+    color: white;
+    position: absolute;
+    cursor: pointer;
+    pointer-events: auto;
+}
