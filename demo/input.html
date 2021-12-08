@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../highlight/styles/vs2015.min.css">
+    <link rel="stylesheet" href="./common.css">
+    <script src="../highlight/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    <title>input</title>
+</head>
+<body>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            outline: none;
+        }
+        .box {
+            width: 350px;
+            padding: 50px;
+            border-radius: 8px;
+            background-color: white;
+        }
+        .box .input {
+            width: 100%;
+            height: 32px;
+            position: relative;
+        }
+        .box .input input {
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-bottom: 2px solid #aaa;
+            font-size: 16px;
+            color: #1e1e1e;
+        }
+        .box .input input:focus ~ label {
+            color: #1890ff;
+            transform: translateY(-100%);
+        }
+        .box .input input:valid ~ label {
+            color: #6be585;
+            transform: translateY(-100%);
+        }
+        .box .input input:focus ~ .underline {
+            transform: scale(1);
+            background-color: #1890ff;
+        }
+        .box .input input:valid ~ .underline {
+            transform: scale(1);
+            background-color: #6be585;
+        }
+        .box .input label {
+            font-size: 16px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: calc(32px - 2px);
+            line-height: calc(32px - 2px);
+            color: #aaa;
+            pointer-events: none;
+            transition: all .5s;
+        }
+        .box .input .underline {
+            position: absolute;
+            bottom: 0;
+            height: 2px;
+            width: 100%;
+            transform: scale(0);
+            transition: all .5s;
+        }
+    </style>
+    <div class="left">
+        <pre>
+            <code class="copy">
+            </code>
+        </pre>
+        <pre>
+            <code class="copy">
+            </code>
+        </pre>
+    </div>
+    <div class="right">
+        <div class="box">
+            <div class="input">
+                <input id="input" type="text" required>
+                <div class="underline"></div>
+                <label for="input">你的名字</label>
+            </div>
+        </div>
+    </div>
+    <script src="./copy.js"></script>
+</body>
+</html>
